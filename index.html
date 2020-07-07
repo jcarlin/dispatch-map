@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Display a map</title>
+    
+    
+
+    
+  </head>
+  <body>
+    <!-- Map -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <link  href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" rel="stylesheet"/>
+
+    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Styling -->
+    <link href="style.css" rel="stylesheet">
+    <div id="map">
+      <div class="map-controls">
+        <div class="map-title">
+          Dispatch delivers in cities across the country. Find a market near you.
+        </div>
+        <div id="geocoder-container">
+          
+        </div>
+        <div id="cta-container" class="hidden">
+          <rect class="cta-rect">
+            <div id="cta-title">Title</div>
+            <div id="cta-desc">Description</div>
+            <div id="cta-action">
+              <button id="cta-button" onclick="submit(event)" value=""></button>
+            </div>
+          </rect>
+        </div>
+      </div>
+    </div>
+    <script src="./map.js"></script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+/* Global Styling */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Override Map styles */
+.mapboxgl-map {
+  font-family: Nunito Sans;
+  font-style: normal;
+}
+
+.mapboxgl-ctrl-geocoder--icon {
+  fill: rgb(144, 144, 144)
+}
+
+.mapboxgl-ctrl-geocoder--icon-close {
+  fill: rgb(144, 144, 144)
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.mapboxgl-ctrl-bottom-left {
+  visibility: hidden;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  visibility: hidden;
+}
+
+/* Main Map Styling */
+#map { 
+  /* position: absolute; */
+  /* display: flex; */
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: initial;
+}
+
+.map-controls {
+  padding-top: 64px;
+  padding-left: 165px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Container for title, search, CTA */
+@media (max-width: 480px) {
+  .map-controls {
+    padding: 24px 24px 24px 24px;
+    align-self: center;
+    align-content: center;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+
+
+/* Map Title (upper left) */
+.map-title {
+  max-width: 489px;
+  min-height: 58px;
+  
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens */
+
+/* Container for the Geocoder plugin widget */
+#geocoder-container {
+  z-index: 1;
+  position: relative;
+  padding-top: 24px;
+  width: 350px;
+}
+
+/* Geocoder */
+.mapboxgl-ctrl-geocoder {
+  width: 350px;
+  font-family: Nunito Sans;
+  font-style: normal;
+}
+
+/* Geocoder Search input */
+.mapboxgl-ctrl-geocoder--input {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: #737173;
+}
+
+/* Remove gap between input and result list */
+/* .mapboxgl-ctrl-geocoder .suggestions {
+  position: unset;
+} */
+
+/* CTA box container */
+.cta-container {
+  z-index: 1;
+  position: relative;
+  width: 350px;
+  height: 171px;
+}
+
+/* CTA white rectangle */
+.cta-rect {
+  position: fixed;
+  width: inherit;
+
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(23, 22, 23, 0.04);
+  border-radius: 4px 4px 4px 4px;
+}
+
+/* CTA content */
+.cta-content {
+  position: relative;
+  margin-left: 16px;
+}
+
+/* CTA title */
+#cta-title {
+  margin-top: 13px;
+  margin-left: 16px;
+  height: 30px;
+
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%;
+
+  color: #003A5D;
+}
+
+#cta-desc {
+  height: 36px;
+  margin-top: 8px;
+  margin-left: 16px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+  color: #737173;
+}
+
+#cta-action {
+  margin-left: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+#cta-button {
+  width: 131px;
+  height: 40px;
+  background: #FF8300;
+  border-radius: 4px;
+  border-width: 0px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  flex: none;
+  order: 0;
+  align-self: center;
+
+  cursor:pointer;
+}
+
+#cta-button:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+/* .mapboxgl-ctrl-geocoder .suggestions > li > a {
+  padding: unset;
+  position: unset;
+} */
+
+/* Results Rectangle */
+/* .geocoder-dropdown-item {
+  width: 350px;
+  height: 171px;
+  left: 165px;
+  top: 5432px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(96, 97, 112, 0.16), 0px 0px 1px rgba(23, 22, 23, 0.04);
+  border-radius: 0px 0px 4px 4px;
+} */
+
+/* Markers on map */
+.marker {
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+}
+
+
